@@ -57,3 +57,16 @@ extension Crawl: ManagedObjectConvertible {
         }
     }
 }
+
+//MARK: Equatable / Hashable
+extension Crawl: Equatable {}
+
+func ==(lhs: Crawl, rhs: Crawl) -> Bool {
+    return lhs.title == rhs.title
+}
+
+extension Crawl: Hashable {
+    var hashValue: Int {
+        return (title + bodyParagraphs.reduce("", combine: +) + preTitle + intro).hashValue
+    }
+}

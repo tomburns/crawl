@@ -30,6 +30,7 @@
 		1F8A176B1C61318B0083B277 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8A176A1C61318B0083B277 /* RxCocoa.framework */; };
 		1F8A176D1C6131900083B277 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8A176C1C6131900083B277 /* RxDataSources.framework */; };
 		1F8A17701C6131B10083B277 /* CrawlListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */; };
+		1F8A17731C6148FD0083B277 /* Presentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A17711C6148FD0083B277 /* Presentation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		1F8A176A1C61318B0083B277 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxCocoa.framework"; sourceTree = "<group>"; };
 		1F8A176C1C6131900083B277 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = "Carthage/Checkouts/RxDataSources/build/Debug-iphoneos/RxDataSources.framework"; sourceTree = "<group>"; };
 		1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlListViewModel.swift; sourceTree = "<group>"; };
+		1F8A17721C6148FD0083B277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Presentation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				1F8A17631C612E200083B277 /* Crawl Presentation */,
 				1F62AC051C6050EE00F1DFBC /* Model */,
 				1F2B38E21C5EDDEB00ACBD09 /* Main.storyboard */,
+				1F8A17711C6148FD0083B277 /* Presentation.storyboard */,
 				1F2B38E51C5EDDEB00ACBD09 /* Assets.xcassets */,
 				1F2B38E71C5EDDEB00ACBD09 /* LaunchScreen.storyboard */,
 				1F2B38EA1C5EDDEB00ACBD09 /* Info.plist */,
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F62AC021C604BDE00F1DFBC /* Lorem.plist in Resources */,
+				1F8A17731C6148FD0083B277 /* Presentation.storyboard in Resources */,
 				1F2B38E91C5EDDEB00ACBD09 /* LaunchScreen.storyboard in Resources */,
 				1F2B38E61C5EDDEB00ACBD09 /* Assets.xcassets in Resources */,
 				1F2B38E41C5EDDEB00ACBD09 /* Main.storyboard in Resources */,
@@ -302,6 +306,14 @@
 				1F2B38E81C5EDDEB00ACBD09 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1F8A17711C6148FD0083B277 /* Presentation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8A17721C6148FD0083B277 /* Base */,
+			);
+			name = Presentation.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
