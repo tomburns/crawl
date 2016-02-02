@@ -26,11 +26,11 @@
 		1F62AC0F1C6055B000F1DFBC /* CrawlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62AC0E1C6055B000F1DFBC /* CrawlStore.swift */; };
 		1F8A17621C60FDB60083B277 /* UnmanagedConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A17611C60FDB60083B277 /* UnmanagedConvertible.swift */; };
 		1F8A17661C612E880083B277 /* CrawlListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A17651C612E880083B277 /* CrawlListViewController.swift */; };
-		1F8A17691C6131850083B277 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8A17681C6131850083B277 /* RxSwift.framework */; };
-		1F8A176B1C61318B0083B277 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8A176A1C61318B0083B277 /* RxCocoa.framework */; };
-		1F8A176D1C6131900083B277 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8A176C1C6131900083B277 /* RxDataSources.framework */; };
 		1F8A17701C6131B10083B277 /* CrawlListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */; };
 		1F8A17731C6148FD0083B277 /* Presentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8A17711C6148FD0083B277 /* Presentation.storyboard */; };
+		1F95F8A51C6150F50041EC8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A21C6150F50041EC8A /* RxCocoa.framework */; };
+		1F95F8A61C6150F50041EC8A /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A31C6150F50041EC8A /* RxDataSources.framework */; };
+		1F95F8A71C6150F50041EC8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A41C6150F50041EC8A /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +60,9 @@
 		1F8A176C1C6131900083B277 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = "Carthage/Checkouts/RxDataSources/build/Debug-iphoneos/RxDataSources.framework"; sourceTree = "<group>"; };
 		1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlListViewModel.swift; sourceTree = "<group>"; };
 		1F8A17721C6148FD0083B277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Presentation.storyboard; sourceTree = "<group>"; };
+		1F95F8A21C6150F50041EC8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1F95F8A31C6150F50041EC8A /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		1F95F8A41C6150F50041EC8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8A176D1C6131900083B277 /* RxDataSources.framework in Frameworks */,
-				1F8A176B1C61318B0083B277 /* RxCocoa.framework in Frameworks */,
-				1F8A17691C6131850083B277 /* RxSwift.framework in Frameworks */,
+				1F95F8A51C6150F50041EC8A /* RxCocoa.framework in Frameworks */,
+				1F95F8A61C6150F50041EC8A /* RxDataSources.framework in Frameworks */,
+				1F95F8A71C6150F50041EC8A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +192,9 @@
 		1F8A176E1C6131950083B277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F95F8A21C6150F50041EC8A /* RxCocoa.framework */,
+				1F95F8A31C6150F50041EC8A /* RxDataSources.framework */,
+				1F95F8A41C6150F50041EC8A /* RxSwift.framework */,
 				1F8A176C1C6131900083B277 /* RxDataSources.framework */,
 				1F8A176A1C61318B0083B277 /* RxCocoa.framework */,
 				1F8A17681C6131850083B277 /* RxSwift.framework */,
@@ -206,6 +212,7 @@
 				1F2B38D71C5EDDEB00ACBD09 /* Sources */,
 				1F2B38D81C5EDDEB00ACBD09 /* Frameworks */,
 				1F2B38D91C5EDDEB00ACBD09 /* Resources */,
+				1F95F8A11C61508B0041EC8A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -264,6 +271,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F95F8A11C61508B0041EC8A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F2B38D71C5EDDEB00ACBD09 /* Sources */ = {
@@ -409,9 +435,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxDataSources/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Crawl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,9 +453,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/RxDataSources/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Crawl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

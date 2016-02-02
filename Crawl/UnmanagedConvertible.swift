@@ -56,8 +56,9 @@ extension ObservableType where E: SequenceType, E.Generator.Element: ManagedObje
                 return item.createManagedObjectInContext(context)
             }
 
-            return creationObservables.combineLatest { $0 }
-
+            return creationObservables.toObservable()
+                .merge()
+                .toArray()
         }
     }
 }

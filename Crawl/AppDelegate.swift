@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RxSwift
 import MediaPlayer
 
 @UIApplicationMain
@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let crawlViewController = CrawlViewController(nibName: nil, bundle: nil)
 
     let appCoordinator = AppCoordinator()
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

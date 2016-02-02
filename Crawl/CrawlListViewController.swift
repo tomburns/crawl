@@ -25,10 +25,10 @@ class CrawlListViewController: UIViewController {
 
         let dataSource = RxTableViewSectionedAnimatedDataSource<CrawlSection>()
 
-        dataSource.configureCell = { (tv, ip, i) in
-            let cell = tv.dequeueReusableCellWithIdentifier("CrawlCell") ?? UITableViewCell(style:.Default, reuseIdentifier: "Cell")
+        dataSource.configureCell = { (tableView, indexPath, item) in
+            let cell = tableView.dequeueReusableCellWithIdentifier("CrawlCell") ?? UITableViewCell(style:.Default, reuseIdentifier: "Cell")
 
-            cell.textLabel!.text = "\(i)"
+            cell.textLabel!.text = "\(item)"
 
             return cell
         }
@@ -43,7 +43,6 @@ class CrawlListViewController: UIViewController {
                 
             }
             .addDisposableTo(disposeBag)
-        
     }
 
     override func viewWillAppear(animated: Bool) {

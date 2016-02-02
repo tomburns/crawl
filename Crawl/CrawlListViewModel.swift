@@ -29,7 +29,6 @@ struct CrawlListViewModel {
 
 //Mark: Identity, etc
 
-
 extension Crawl: IdentifiableType {
     typealias Identity = Int
 
