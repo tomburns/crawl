@@ -99,7 +99,10 @@ class CrawlStore {
                     }
     
                     do {
-                        let immutableResults = try typedResults.map(Crawl.init)
+                        let immutableResults = try typedResults.map { foo in
+                            try foo.unmanagedRepresentation()
+                        }
+
                         observer.onNext(immutableResults)
                         observer.onCompleted()
                     } catch {

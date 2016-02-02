@@ -21,12 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let appCoordinator = AppCoordinator()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window?.rootViewController = crawlViewController
-        
-        let pickerController = MPMediaPickerController(mediaTypes: [.Music])
-        pickerController.delegate = pickerDelegate
-        
-        crawlViewController.presentViewController(pickerController, animated: true, completion: { print("uh") })
+
         // Override point for customization after application launch.
         return true
     }

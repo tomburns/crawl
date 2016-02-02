@@ -4,4 +4,10 @@
    <FileRef
       location = "container:Crawl.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/RxDataSources/RxDataSources.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/RxSwift/Rx.xcodeproj">
+   </FileRef>
 </Workspace>

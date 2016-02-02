@@ -1,35 +1,21 @@
-import UIKit
+import CoreData
+import RxSwift
 
-public struct Crawl {
+struct Crawl {
     let intro: String
     let preTitle: String
     let title: String
     let bodyParagraphs: [String]
     let mediaID: String?
-    
-    init(managedCrawl: ManagedCrawl) throws {
-        guard let intro = managedCrawl.intro,
-            let preTitle = managedCrawl.preTitle,
-            let title = managedCrawl.title,
-            let body = managedCrawl.body else {
-                throw CrawlError.CoreData
-        }
-        
-        self.intro = intro
-        self.preTitle = preTitle
-        self.title = title
-        self.bodyParagraphs = Crawl.paragraphsForBody(body)
-        self.mediaID = managedCrawl.mediaID
-    }
-    
-    public init(intro: String, preTitle: String, title: String, body: String, mediaID: String? = nil) {
+
+    init(intro: String, preTitle: String, title: String, body: String, mediaID: String? = nil) {
         self.intro = intro
         self.preTitle = preTitle
         self.title = title
         self.bodyParagraphs = Crawl.paragraphsForBody(body)
         self.mediaID = mediaID
     }
-    
+
     static func defaultCrawl() -> Crawl {
         guard let defaultFile = NSBundle.mainBundle().pathForResource("Lorem", ofType: "plist"),
             let plistDictionary = NSDictionary(contentsOfFile: defaultFile),
@@ -39,11 +25,35 @@ public struct Crawl {
             let body = plistDictionary["body"] as? String else {
                 return Crawl(intro: "how did i get here\ni am not good with computers", preTitle: "Hello", title: "GREETINGS", body: "How are you?")
         }
-        
+
         return Crawl(intro: intro, preTitle: preTitle, title: title, body: body)
     }
-    
+
     private static func paragraphsForBody(body: String) -> [String] {
         return body.characters.split{$0 == "\n"}.map(String.init)
+    }
+}
+
+extension Crawl: ManagedObjectConvertible {
+
+    typealias ManagedType = ManagedCrawl
+
+    func createManagedObjectInContext(context: NSManagedObjectContext) -> Observable<ManagedType> {
+        return Observable.create { observer in
+            context.performBlock {
+                guard let newCrawl = NSEntityDescription.insertNewObjectForEntityForName(ManagedType.entityName, inManagedObjectContext: context) as? ManagedCrawl else {
+                    fatalError("Core Data typecasting failed.")
+                }
+                newCrawl.title = "Foo"
+                newCrawl.preTitle = "Foo"
+                newCrawl.intro = "Bar"
+                newCrawl.body = "Baz"
+
+                observer.onNext(newCrawl)
+                observer.onCompleted()
+            }
+
+            return NopDisposable.instance
+        }
     }
 }
