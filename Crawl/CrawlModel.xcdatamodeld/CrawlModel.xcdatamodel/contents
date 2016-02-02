@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="Crawl" representedClassName="ManagedCrawl" syncable="YES">
+        <attribute name="body" attributeType="String" syncable="YES"/>
+        <attribute name="intro" attributeType="String" syncable="YES"/>
+        <attribute name="mediaID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preTitle" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Crawl" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

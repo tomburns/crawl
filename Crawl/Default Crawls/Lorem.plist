@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>preTitle</key>
+	<string>Lorem Ipsum</string>
+	<key>intro</key>
+	<string>some fake latin</string>
+	<key>title</key>
+	<string>DOLOR SIT AMET</string>
+	<key>body</key>
+	<string>Incidunt magna aptent viverra. Metus donec platea. Sagittis lectus ultrices posuere cras laoreet. Vestibulum libero fusce. Maecenas sociis massa. Quisque lacinia at sem mollis nibh. Porta maecenas faucibus. Libero nonummy eget eros donec ut. Nec libero penatibus urna volutpat donec mollit malesuada quam dis mi.
+
+Elit vulputate diam. Tellus hendrerit donec ut urna pellentesque justo pede at. Eros facilisis consequat. Ut porttitor aliquam. Integer blandit taciti erat vehicula sodales sapien.
+
+Lacus tristique elit. Accumsan sollicitudin dictumst aenean imperdiet vestibulum. Quisque neque nonummy. Eu condimentum ligula. Nulla placerat at nec curabitur eu non aliquet tempus ligula.
+
+Auctor amet sed. Consectetuer non ullamcorper sed lectus a proin placerat porta. Nonummy varius id. Nam rutrum amet habitasse a lorem. Ut nunc integer suscipit.
+
+Amet quam libero. Volutpat eget a morbi vitae rhoncus convallis pede risus. Est est in commodo vitae fringilla. Ullamcorper lectus dolor. Ipsum convallis phasellus cras.</string>
+	<key>mediaID</key>
+	<string></string>
+</dict>
+</plist>
