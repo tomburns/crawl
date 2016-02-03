@@ -9,7 +9,13 @@
 import RxSwift
 import CoreData
 
-class CrawlStore {
+protocol CrawlStoreType {
+    var coreDataReady: Observable<Bool> { get }
+    func allCrawls() -> Observable<[Crawl]>
+}
+
+
+class CrawlStore: CrawlStoreType {
     let managedObjectContext: NSManagedObjectContext
 
     internal private(set) lazy var coreDataReady: Observable<Bool> = {

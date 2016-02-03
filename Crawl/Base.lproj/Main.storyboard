@@ -8,7 +8,7 @@
         <!--Crawl List-->
         <scene sceneID="cNu-79-mZN">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="YEq-a4-2VV" customClass="CrawlListViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CrawlList" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YEq-a4-2VV" customClass="CrawlListViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IyQ-i2-UNw"/>
                         <viewControllerLayoutGuide type="bottom" id="heD-zk-aVC"/>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I7U-sd-6uE" id="QC4-bR-v3q">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -43,16 +43,35 @@
                     <navigationItem key="navigationItem" title="Crawl List" id="ixX-fh-QF6"/>
                     <connections>
                         <outlet property="tableView" destination="IOJ-hZ-CjV" id="Mj8-79-LTW"/>
+                        <segue destination="TyO-ka-4pA" kind="show" identifier="ShowCrawlDetailFromList" id="fTt-FU-aHk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icC-Pw-rhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="229"/>
         </scene>
+        <!--Crawl Detail View Controller-->
+        <scene sceneID="sao-GO-vqV">
+            <objects>
+                <viewController storyboardIdentifier="CrawlDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TyO-ka-4pA" customClass="CrawlDetailViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9zu-zS-hft"/>
+                        <viewControllerLayoutGuide type="bottom" id="VK9-Er-GRq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nfi-Nz-Dke">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvI-P2-eTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="229"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pwz-5v-Css">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3aX-Nm-moD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3aX-Nm-moD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FPf-cR-2Mr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

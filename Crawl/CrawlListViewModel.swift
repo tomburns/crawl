@@ -10,20 +10,21 @@ import RxDataSources
 import RxCocoa
 import RxSwift
 
-struct CrawlListViewModel {
+protocol CrawlListViewModelType {
+    var sections: Driver<[CrawlSection]> { get }
+}
 
+struct CrawlListViewModel: CrawlListViewModelType {
     let store = CrawlStore()
 
     let sections: Driver<[CrawlSection]>
 
-
     init(crawlStore: CrawlStore = CrawlStore()) {
-        self.sections = store.allCrawls()
-            .map { crawls in
-                return [CrawlSection(items: crawls)]
-            }
-            .asDriver(onErrorJustReturn:[])
-
+            self.sections = store.allCrawls()
+                .map { crawls in
+                    return [CrawlSection(items: crawls)]
+                }
+                .asDriver(onErrorJustReturn:[])
     }
 }
 
@@ -51,7 +52,7 @@ struct CrawlSection: AnimatableSectionModelType {
     init(items: [Item]) {
         self.items = items
     }
-
+    
     init(original: CrawlSection, items: [Item]) {
         self.init(items: items)
     }

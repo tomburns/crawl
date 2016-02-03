@@ -14,7 +14,10 @@ import RxDataSources
 
 class CrawlListViewController: UIViewController {
 
-    private let viewModel = CrawlListViewModel()
+    private lazy var viewModel: CrawlListViewModelType = {
+        // normally other config/injection happens here, this is a simple case
+        return CrawlListViewModel()
+    }()
 
     private let disposeBag = DisposeBag()
 
@@ -39,8 +42,7 @@ class CrawlListViewController: UIViewController {
 
         tableView.rx_modelSelected(Crawl)
             .bindNext { [weak self] crawl in
-                self?.pushPresentationForCrawl(crawl)
-                
+                self?.showCrawlDetail(crawl)
             }
             .addDisposableTo(disposeBag)
     }
@@ -53,9 +55,17 @@ class CrawlListViewController: UIViewController {
         }
     }
 
-    func pushPresentationForCrawl(crawl: Crawl) {
-        let viewController = CrawlViewController()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
 
-        self.navigationController?.pushViewController(viewController, animated: true)
+        if let identifier = segue.identifier where identifier == Segue.ShowCrawlDetailFromList,
+            let crawlBox = sender as? Box<Crawl>,
+            let detailViewController = segue.destinationViewController as? CrawlDetailViewController {
+                detailViewController.crawl = crawlBox.value
+        }
+    }
+
+    func showCrawlDetail(crawl: Crawl) {
+        self.performSegue(Segue.ShowCrawlDetailFromList, sender: Box(crawl))
     }
 }

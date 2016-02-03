@@ -31,6 +31,10 @@
 		1F95F8A51C6150F50041EC8A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A21C6150F50041EC8A /* RxCocoa.framework */; };
 		1F95F8A61C6150F50041EC8A /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A31C6150F50041EC8A /* RxDataSources.framework */; };
 		1F95F8A71C6150F50041EC8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F95F8A41C6150F50041EC8A /* RxSwift.framework */; };
+		1F95F8AA1C619B0F0041EC8A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8A91C619B0F0041EC8A /* Storyboards.swift */; };
+		1F95F8AC1C619BA90041EC8A /* CrawlDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */; };
+		1F95F8AE1C619C370041EC8A /* MainInterfaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AD1C619C370041EC8A /* MainInterfaceCoordinator.swift */; };
+		1F95F8B01C61B82F0041EC8A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AF1C61B82F0041EC8A /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		1F95F8A21C6150F50041EC8A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		1F95F8A31C6150F50041EC8A /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		1F95F8A41C6150F50041EC8A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1F95F8A91C619B0F0041EC8A /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlDetailViewController.swift; sourceTree = "<group>"; };
+		1F95F8AD1C619C370041EC8A /* MainInterfaceCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceCoordinator.swift; sourceTree = "<group>"; };
+		1F95F8AF1C61B82F0041EC8A /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				1F62AC081C60514800F1DFBC /* App */,
-				1F8A17641C612E750083B277 /* Crawl List */,
+				1F8A17641C612E750083B277 /* Main Interface */,
 				1F8A17631C612E200083B277 /* Crawl Presentation */,
 				1F62AC051C6050EE00F1DFBC /* Model */,
-				1F2B38E21C5EDDEB00ACBD09 /* Main.storyboard */,
-				1F8A17711C6148FD0083B277 /* Presentation.storyboard */,
-				1F2B38E51C5EDDEB00ACBD09 /* Assets.xcassets */,
-				1F2B38E71C5EDDEB00ACBD09 /* LaunchScreen.storyboard */,
-				1F2B38EA1C5EDDEB00ACBD09 /* Info.plist */,
 			);
 			path = Crawl;
 			sourceTree = "<group>";
@@ -156,6 +159,12 @@
 				1F2B38DE1C5EDDEB00ACBD09 /* AppDelegate.swift */,
 				1F62AC031C604D1D00F1DFBC /* AppCoordinator.swift */,
 				1F4206F01C60664400594F2C /* CrawlError.swift */,
+				1F2B38E21C5EDDEB00ACBD09 /* Main.storyboard */,
+				1F8A17711C6148FD0083B277 /* Presentation.storyboard */,
+				1F95F8A91C619B0F0041EC8A /* Storyboards.swift */,
+				1F2B38E51C5EDDEB00ACBD09 /* Assets.xcassets */,
+				1F2B38E71C5EDDEB00ACBD09 /* LaunchScreen.storyboard */,
+				1F2B38EA1C5EDDEB00ACBD09 /* Info.plist */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8A17611C60FDB60083B277 /* UnmanagedConvertible.swift */,
+				1F95F8AF1C61B82F0041EC8A /* Box.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -180,13 +190,15 @@
 			name = "Crawl Presentation";
 			sourceTree = "<group>";
 		};
-		1F8A17641C612E750083B277 /* Crawl List */ = {
+		1F8A17641C612E750083B277 /* Main Interface */ = {
 			isa = PBXGroup;
 			children = (
+				1F95F8AD1C619C370041EC8A /* MainInterfaceCoordinator.swift */,
 				1F8A17651C612E880083B277 /* CrawlListViewController.swift */,
 				1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */,
+				1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */,
 			);
-			name = "Crawl List";
+			name = "Main Interface";
 			sourceTree = "<group>";
 		};
 		1F8A176E1C6131950083B277 /* Frameworks */ = {
@@ -209,10 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F2B38ED1C5EDDEB00ACBD09 /* Build configuration list for PBXNativeTarget "Crawl" */;
 			buildPhases = (
+				1F95F8A81C619AB60041EC8A /* Natalie */,
 				1F2B38D71C5EDDEB00ACBD09 /* Sources */,
 				1F2B38D81C5EDDEB00ACBD09 /* Frameworks */,
 				1F2B38D91C5EDDEB00ACBD09 /* Resources */,
-				1F95F8A11C61508B0041EC8A /* ShellScript */,
+				1F95F8A11C61508B0041EC8A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -273,7 +286,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F95F8A11C61508B0041EC8A /* ShellScript */ = {
+		1F95F8A11C61508B0041EC8A /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,11 +296,26 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		1F95F8A81C619AB60041EC8A /* Natalie */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Natalie;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Natalie Generator: Determining if generated Swift file is up-to-date.\"\n\nNATALIE_PATH=\"/usr/local/bin/natalie.swift\"\n#If you put natalie.swift on the project folder\n# NATALIE_PATH=\"$PROJECT_DIR/natalie.swift\"\n\nif [ -f $NATALIE_PATH ]; then\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\n//\nOUTPUT_PATH=\"$BASE_PATH/Storyboards.swift\"\n\nif [ ! -e \"$OUTPUT_PATH\" ] || [ -n \"$(find \"$BASE_PATH\" -type f -name \"*.storyboard\" -newer \"$OUTPUT_PATH\" -print -quit)\" ]; then\necho \"Natalie Generator: Generated Swift is out-of-date; re-generating...\"\n\n/usr/bin/chflags nouchg \"$OUTPUT_PATH\"\n\"$NATALIE_PATH\" \"$BASE_PATH\" > \"$OUTPUT_PATH\"\n/usr/bin/chflags uchg \"$OUTPUT_PATH\"\n\necho \"Natalie Generator: Done.\"\nelse\necho \"Natalie Generator: Generated Swift is up-to-date; skipping re-generation.\"\nfi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -297,12 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2B38F51C5EDDF800ACBD09 /* Crawl.swift in Sources */,
+				1F95F8AC1C619BA90041EC8A /* CrawlDetailViewController.swift in Sources */,
 				1F2B38F61C5EDDF800ACBD09 /* CrawlView.swift in Sources */,
 				1F2B38DF1C5EDDEB00ACBD09 /* AppDelegate.swift in Sources */,
 				1F4206EF1C6061A800594F2C /* ManagedCrawl.swift in Sources */,
 				1F8A17701C6131B10083B277 /* CrawlListViewModel.swift in Sources */,
 				1F4206EE1C6061A800594F2C /* ManagedCrawl+CoreDataProperties.swift in Sources */,
+				1F95F8AE1C619C370041EC8A /* MainInterfaceCoordinator.swift in Sources */,
 				1F62AC041C604D1D00F1DFBC /* AppCoordinator.swift in Sources */,
+				1F95F8B01C61B82F0041EC8A /* Box.swift in Sources */,
+				1F95F8AA1C619B0F0041EC8A /* Storyboards.swift in Sources */,
 				1F8A17661C612E880083B277 /* CrawlListViewController.swift in Sources */,
 				1F62AC0D1C60534000F1DFBC /* CrawlModel.xcdatamodeld in Sources */,
 				1F62AC0F1C6055B000F1DFBC /* CrawlStore.swift in Sources */,
