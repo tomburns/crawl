@@ -9,16 +9,24 @@
 import UIKit
 
 class AppCoordinator {
-    private let crawlStore: CrawlStoreType
+    private let crawlStore: ManagedModelStore<Crawl>
 
     let mainInterfaceCoordinator: MainInterfaceCoordinator
 
-    init(crawlStore: CrawlStoreType = CrawlStore()) {
+    init(crawlStore: ManagedModelStore<Crawl> = ManagedModelStore()) {
         self.crawlStore = crawlStore
         self.mainInterfaceCoordinator = MainInterfaceCoordinator(crawlStore: crawlStore)
     }
 
     func installMainInterface(window window: UIWindow) {
         window.rootViewController = mainInterfaceCoordinator.rootNavController
+    }
+    
+    func applicationWillResignActive(application: UIApplication) {
+        crawlStore.save()
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        crawlStore.save()
     }
 }

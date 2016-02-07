@@ -15,16 +15,19 @@ protocol CrawlListViewModelType {
 }
 
 struct CrawlListViewModel: CrawlListViewModelType {
-    let store = CrawlStore()
-
+    
     let sections: Driver<[CrawlSection]>
-
-    init(crawlStore: CrawlStore = CrawlStore()) {
-            self.sections = store.allCrawls()
-                .map { crawls in
-                    return [CrawlSection(items: crawls)]
-                }
-                .asDriver(onErrorJustReturn:[])
+    
+    private let crawlStore: ManagedModelStore<Crawl>
+    
+    init(crawlStore: ManagedModelStore<Crawl>) {
+        self.crawlStore = crawlStore
+        
+        self.sections = crawlStore.allItems
+            .map { crawls in
+                return [CrawlSection(items: crawls)]
+            }
+            .asDriver(onErrorJustReturn:[])
     }
 }
 
@@ -32,13 +35,13 @@ struct CrawlListViewModel: CrawlListViewModelType {
 
 extension Crawl: IdentifiableType {
     typealias Identity = Int
-
+    
     var identity: Identity { return self.hashValue }
 }
 
 extension CrawlSection: IdentifiableType {
     typealias Identity = String
-
+    
     var identity: Identity { return self.title }
 }
 
@@ -46,9 +49,9 @@ extension CrawlSection: IdentifiableType {
 struct CrawlSection: AnimatableSectionModelType {
     typealias Item = Crawl
     let items: [Crawl]
-
+    
     let title = "Crawls"
-
+    
     init(items: [Item]) {
         self.items = items
     }

@@ -1,5 +1,5 @@
 //
-//  UnmanagedConvertible.swift
+//  ManagedObjectConvertible.swift
 //  Crawl
 //
 //  Created by Tom Burns on 2/2/16.
@@ -14,21 +14,12 @@ protocol ChimeManagedObject {
     static var entityName: String { get }
 }
 
-protocol UnmanagedConvertible {
-    typealias UnmanagedType: ManagedObjectConvertible
-
-    func unmanagedRepresentation() throws -> UnmanagedType
-}
-
 protocol ManagedObjectConvertible {
     typealias ManagedType: NSManagedObject, ChimeManagedObject
+    
+    init(managedObject: ManagedType) throws
+    
     func createManagedObjectInContext(context: NSManagedObjectContext) -> Observable<ManagedType>
-}
-
-extension ObservableType where E: UnmanagedConvertible {
-    func mapToUnmanaged() -> Observable<E.UnmanagedType> {
-        return self.map { try $0.unmanagedRepresentation() }
-    }
 }
 
 extension ObservableType where E: ManagedObjectConvertible {
@@ -36,12 +27,6 @@ extension ObservableType where E: ManagedObjectConvertible {
         return self.flatMapLatest { unmanaged -> Observable<E.ManagedType> in
             return unmanaged.createManagedObjectInContext(context)
         }
-    }
-}
-
-extension ObservableType where E: SequenceType, E.Generator.Element: UnmanagedConvertible {
-    func mapToUnmanaged() -> Observable<[E.Generator.Element.UnmanagedType]> {
-        return self.map { sequence in try sequence.map { try $0.unmanagedRepresentation() } }
     }
 }
 

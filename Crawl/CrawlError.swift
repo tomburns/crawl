@@ -9,5 +9,15 @@
 import Foundation
 
 enum CrawlError: ErrorType {
-    case CoreData
+    case ManagedObjectMapping
+    case CoreData(ErrorType?)
+}
+
+func bindingErrorToInterface(error: ErrorType) {
+    let error = "Binding error to UI: \(error)"
+    #if DEBUG
+        fatalError(error)
+    #else
+        print(error)
+    #endif
 }

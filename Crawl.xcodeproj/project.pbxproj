@@ -19,11 +19,11 @@
 		1F4206EE1C6061A800594F2C /* ManagedCrawl+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4206EC1C6061A800594F2C /* ManagedCrawl+CoreDataProperties.swift */; };
 		1F4206EF1C6061A800594F2C /* ManagedCrawl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4206ED1C6061A800594F2C /* ManagedCrawl.swift */; };
 		1F4206F11C60664400594F2C /* CrawlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4206F01C60664400594F2C /* CrawlError.swift */; };
+		1F590C051C66BC64005DDB3D /* ManagedModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F590C041C66BC64005DDB3D /* ManagedModelStore.swift */; };
 		1F62AC021C604BDE00F1DFBC /* Lorem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F62AC011C604BDE00F1DFBC /* Lorem.plist */; };
 		1F62AC041C604D1D00F1DFBC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62AC031C604D1D00F1DFBC /* AppCoordinator.swift */; };
 		1F62AC0A1C6051DF00F1DFBC /* CrawlFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62AC091C6051DF00F1DFBC /* CrawlFormatter.swift */; };
 		1F62AC0D1C60534000F1DFBC /* CrawlModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F62AC0B1C60534000F1DFBC /* CrawlModel.xcdatamodeld */; };
-		1F62AC0F1C6055B000F1DFBC /* CrawlStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62AC0E1C6055B000F1DFBC /* CrawlStore.swift */; };
 		1F8A17621C60FDB60083B277 /* UnmanagedConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A17611C60FDB60083B277 /* UnmanagedConvertible.swift */; };
 		1F8A17661C612E880083B277 /* CrawlListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A17651C612E880083B277 /* CrawlListViewController.swift */; };
 		1F8A17701C6131B10083B277 /* CrawlListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */; };
@@ -35,6 +35,8 @@
 		1F95F8AC1C619BA90041EC8A /* CrawlDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */; };
 		1F95F8AE1C619C370041EC8A /* MainInterfaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AD1C619C370041EC8A /* MainInterfaceCoordinator.swift */; };
 		1F95F8B01C61B82F0041EC8A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F95F8AF1C61B82F0041EC8A /* Box.swift */; };
+		1FF4E3901C66833F00BF0637 /* EditCrawlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E38F1C66833F00BF0637 /* EditCrawlViewController.swift */; };
+		1FF4E3921C66834A00BF0637 /* EditCrawlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4E3911C66834A00BF0637 /* EditCrawlViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,11 +54,11 @@
 		1F4206EC1C6061A800594F2C /* ManagedCrawl+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedCrawl+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1F4206ED1C6061A800594F2C /* ManagedCrawl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedCrawl.swift; sourceTree = "<group>"; };
 		1F4206F01C60664400594F2C /* CrawlError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlError.swift; sourceTree = "<group>"; };
+		1F590C041C66BC64005DDB3D /* ManagedModelStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedModelStore.swift; sourceTree = "<group>"; };
 		1F62AC011C604BDE00F1DFBC /* Lorem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Lorem.plist; path = "Default Crawls/Lorem.plist"; sourceTree = "<group>"; };
 		1F62AC031C604D1D00F1DFBC /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1F62AC091C6051DF00F1DFBC /* CrawlFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlFormatter.swift; sourceTree = "<group>"; };
 		1F62AC0C1C60534000F1DFBC /* CrawlModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrawlModel.xcdatamodel; sourceTree = "<group>"; };
-		1F62AC0E1C6055B000F1DFBC /* CrawlStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlStore.swift; sourceTree = "<group>"; };
 		1F8A17611C60FDB60083B277 /* UnmanagedConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnmanagedConvertible.swift; sourceTree = "<group>"; };
 		1F8A17651C612E880083B277 /* CrawlListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlListViewController.swift; sourceTree = "<group>"; };
 		1F8A17681C6131850083B277 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
@@ -71,6 +73,8 @@
 		1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrawlDetailViewController.swift; sourceTree = "<group>"; };
 		1F95F8AD1C619C370041EC8A /* MainInterfaceCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceCoordinator.swift; sourceTree = "<group>"; };
 		1F95F8AF1C61B82F0041EC8A /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		1FF4E38F1C66833F00BF0637 /* EditCrawlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCrawlViewController.swift; sourceTree = "<group>"; };
+		1FF4E3911C66834A00BF0637 /* EditCrawlViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCrawlViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +144,6 @@
 				1F62AC001C604B8B00F1DFBC /* Default Crawls */,
 				1F4206E71C60612E00594F2C /* Core Data */,
 				1F2B38F01C5EDDF800ACBD09 /* Crawl.swift */,
-				1F62AC0E1C6055B000F1DFBC /* CrawlStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			children = (
 				1F8A17611C60FDB60083B277 /* UnmanagedConvertible.swift */,
 				1F95F8AF1C61B82F0041EC8A /* Box.swift */,
+				1F590C041C66BC64005DDB3D /* ManagedModelStore.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -197,6 +201,8 @@
 				1F8A17651C612E880083B277 /* CrawlListViewController.swift */,
 				1F8A176F1C6131B10083B277 /* CrawlListViewModel.swift */,
 				1F95F8AB1C619BA90041EC8A /* CrawlDetailViewController.swift */,
+				1FF4E38F1C66833F00BF0637 /* EditCrawlViewController.swift */,
+				1FF4E3911C66834A00BF0637 /* EditCrawlViewModel.swift */,
 			);
 			name = "Main Interface";
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF4E3901C66833F00BF0637 /* EditCrawlViewController.swift in Sources */,
 				1F2B38F51C5EDDF800ACBD09 /* Crawl.swift in Sources */,
 				1F95F8AC1C619BA90041EC8A /* CrawlDetailViewController.swift in Sources */,
 				1F2B38F61C5EDDF800ACBD09 /* CrawlView.swift in Sources */,
@@ -331,13 +338,14 @@
 				1F4206EF1C6061A800594F2C /* ManagedCrawl.swift in Sources */,
 				1F8A17701C6131B10083B277 /* CrawlListViewModel.swift in Sources */,
 				1F4206EE1C6061A800594F2C /* ManagedCrawl+CoreDataProperties.swift in Sources */,
+				1FF4E3921C66834A00BF0637 /* EditCrawlViewModel.swift in Sources */,
 				1F95F8AE1C619C370041EC8A /* MainInterfaceCoordinator.swift in Sources */,
 				1F62AC041C604D1D00F1DFBC /* AppCoordinator.swift in Sources */,
+				1F590C051C66BC64005DDB3D /* ManagedModelStore.swift in Sources */,
 				1F95F8B01C61B82F0041EC8A /* Box.swift in Sources */,
 				1F95F8AA1C619B0F0041EC8A /* Storyboards.swift in Sources */,
 				1F8A17661C612E880083B277 /* CrawlListViewController.swift in Sources */,
 				1F62AC0D1C60534000F1DFBC /* CrawlModel.xcdatamodeld in Sources */,
-				1F62AC0F1C6055B000F1DFBC /* CrawlStore.swift in Sources */,
 				1F4206F11C60664400594F2C /* CrawlError.swift in Sources */,
 				1F8A17621C60FDB60083B277 /* UnmanagedConvertible.swift in Sources */,
 				1F62AC0A1C6051DF00F1DFBC /* CrawlFormatter.swift in Sources */,

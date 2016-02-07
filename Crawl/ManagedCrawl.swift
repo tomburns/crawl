@@ -10,18 +10,8 @@ import Foundation
 import CoreData
 
 @objc(ManagedCrawl)
-class ManagedCrawl: NSManagedObject, UnmanagedConvertible, ChimeManagedObject {
+class ManagedCrawl: NSManagedObject, ChimeManagedObject {
     typealias UnmanagedType = Crawl
 
     static let entityName = "Crawl"
-
-    func unmanagedRepresentation() throws -> UnmanagedType  {
-        guard let intro = intro,
-            let preTitle = preTitle,
-            let title = title,
-            let body = body else {
-                throw CrawlError.CoreData
-        }
-        return Crawl(intro: intro, preTitle: preTitle, title: title, body: body, mediaID: mediaID)
-    }
 }

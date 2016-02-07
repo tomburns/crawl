@@ -38,6 +38,17 @@ extension Crawl: ManagedObjectConvertible {
 
     typealias ManagedType = ManagedCrawl
 
+    init(managedObject: ManagedType) throws {
+        guard let intro = managedObject.intro,
+            let preTitle = managedObject.preTitle,
+            let title = managedObject.title,
+            let body = managedObject.body else {
+                throw CrawlError.ManagedObjectMapping
+        }
+        
+        self.init(intro: intro, preTitle: preTitle, title: title, body: body, mediaID: managedObject.mediaID)
+    }
+    
     func createManagedObjectInContext(context: NSManagedObjectContext) -> Observable<ManagedType> {
         return Observable.create { observer in
             context.performBlock {
@@ -46,15 +57,17 @@ extension Crawl: ManagedObjectConvertible {
                 }
                 newCrawl.title = "Foo"
                 newCrawl.preTitle = "Foo"
-                newCrawl.intro = "Bar"
+                newCrawl.intro = "\(NSDate())"
                 newCrawl.body = "Baz"
+                
+                newCrawl.mediaID = self.mediaID
 
                 observer.onNext(newCrawl)
                 observer.onCompleted()
             }
 
             return NopDisposable.instance
-        }
+        }.debug("create")
     }
 }
 

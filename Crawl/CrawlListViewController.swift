@@ -12,20 +12,23 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class CrawlListViewController: UIViewController {
-
+class CrawlListViewController: MainInterfaceViewController {
+    
     private lazy var viewModel: CrawlListViewModelType = {
         // normally other config/injection happens here, this is a simple case
-        return CrawlListViewModel()
+        return CrawlListViewModel(crawlStore: self.dependencies.crawlStore)
     }()
 
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        	self.dependencies = MainInterfaceCoordinator.dependencies
+        
         let dataSource = RxTableViewSectionedAnimatedDataSource<CrawlSection>()
 
         dataSource.configureCell = { (tableView, indexPath, item) in
@@ -43,6 +46,12 @@ class CrawlListViewController: UIViewController {
         tableView.rx_modelSelected(Crawl)
             .bindNext { [weak self] crawl in
                 self?.showCrawlDetail(crawl)
+            }
+            .addDisposableTo(disposeBag)
+        
+        addBarButtonItem.rx_tap
+            .bindNext {
+                self.performSegue(Segue.CreateNewCrawlFromList)
             }
             .addDisposableTo(disposeBag)
     }

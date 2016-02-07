@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3aX-Nm-moD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3aX-Nm-moD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Edit Crawl tk tk-->
+        <scene sceneID="6dp-h8-29e">
+            <objects>
+                <viewController id="N5F-bn-Ch8" customClass="EditCrawlViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJQ-x3-fQZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="O5c-0c-IhR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2TY-7s-162">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Crawl tk tk" id="ClL-AK-Weq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZwI-I5-y2o"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="X3U-Zt-lKb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBarButtonItem" destination="ZwI-I5-y2o" id="TpR-Bf-EIg"/>
+                        <outlet property="saveBarButtonItem" destination="X3U-Zt-lKb" id="3cw-7G-DkF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wQ-Nc-h3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="-651"/>
+        </scene>
         <!--Crawl List-->
         <scene sceneID="cNu-79-mZN">
             <objects>
@@ -40,17 +66,21 @@
                             <constraint firstItem="IOJ-hZ-CjV" firstAttribute="top" secondItem="IyQ-i2-UNw" secondAttribute="bottom" id="oRX-Qx-6Cd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Crawl List" id="ixX-fh-QF6"/>
+                    <navigationItem key="navigationItem" title="Crawl List" id="ixX-fh-QF6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DLW-fI-vCb"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addBarButtonItem" destination="DLW-fI-vCb" id="SUZ-pj-Enc"/>
                         <outlet property="tableView" destination="IOJ-hZ-CjV" id="Mj8-79-LTW"/>
                         <segue destination="TyO-ka-4pA" kind="show" identifier="ShowCrawlDetailFromList" id="fTt-FU-aHk"/>
+                        <segue destination="P10-LI-pVx" kind="presentation" identifier="CreateNewCrawlFromList" id="Xml-JC-Pem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icC-Pw-rhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="229"/>
         </scene>
-        <!--Crawl Detail View Controller-->
+        <!--Detail-->
         <scene sceneID="sao-GO-vqV">
             <objects>
                 <viewController storyboardIdentifier="CrawlDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TyO-ka-4pA" customClass="CrawlDetailViewController" customModule="Crawl" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,12 +91,28 @@
                     <view key="view" contentMode="scaleToFill" id="Nfi-Nz-Dke">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2b-Qk-hZ8">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="fSz-jg-beJ"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O2b-Qk-hZ8" firstAttribute="leading" secondItem="Nfi-Nz-Dke" secondAttribute="leading" id="HQR-8x-Xd7"/>
+                            <constraint firstItem="VK9-Er-GRq" firstAttribute="top" secondItem="O2b-Qk-hZ8" secondAttribute="bottom" id="SM2-D1-Dgb"/>
+                            <constraint firstAttribute="trailing" secondItem="O2b-Qk-hZ8" secondAttribute="trailing" id="m8j-nY-UYy"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="bZS-vE-XDi"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvI-P2-eTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="229"/>
+            <point key="canvasLocation" x="1569" y="217"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pwz-5v-Css">
@@ -85,6 +131,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wz1-8G-zur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-51" y="229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u8B-7l-qZw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P10-LI-pVx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NOT-ZS-TvK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N5F-bn-Ch8" kind="relationship" relationship="rootViewController" id="rwN-JC-seb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcP-en-597" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="-651"/>
         </scene>
     </scenes>
 </document>

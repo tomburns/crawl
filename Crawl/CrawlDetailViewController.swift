@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CrawlDetailViewController: UIViewController {
+class CrawlDetailViewController: MainInterfaceViewController {
     var crawl: Crawl?
 
     lazy var viewModel: CrawlDetailViewModel = {

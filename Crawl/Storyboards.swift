@@ -259,6 +259,8 @@ extension UITableView {
 }
 
 
+//MARK: - EditCrawlViewController
+
 //MARK: - CrawlListViewController
 extension UIStoryboardSegue {
     func selection() -> CrawlListViewController.Segue? {
@@ -278,11 +280,14 @@ extension CrawlListViewController {
 
     enum Segue: String, CustomStringConvertible, SegueProtocol {
         case ShowCrawlDetailFromList = "ShowCrawlDetailFromList"
+        case CreateNewCrawlFromList = "CreateNewCrawlFromList"
 
         var kind: SegueKind? {
             switch (self) {
             case ShowCrawlDetailFromList:
                 return SegueKind(rawValue: "show")
+            case CreateNewCrawlFromList:
+                return SegueKind(rawValue: "presentation")
             }
         }
 
@@ -290,6 +295,8 @@ extension CrawlListViewController {
             switch (self) {
             case ShowCrawlDetailFromList:
                 return CrawlDetailViewController.self
+            case CreateNewCrawlFromList:
+                return UINavigationController.self
             }
         }
 

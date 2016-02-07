@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var appCoordinator: AppCoordinator!
-
+        
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         appCoordinator = AppCoordinator()
@@ -26,5 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return true
+    }
+    
+    func applicationWillResignActive(application: UIApplication) {
+        appCoordinator.applicationWillResignActive(application)
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        appCoordinator.applicationWillTerminate(application)
     }
 }
